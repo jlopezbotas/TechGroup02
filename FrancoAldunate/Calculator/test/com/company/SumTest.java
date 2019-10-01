@@ -44,4 +44,14 @@ public class SumTest {
         final double expectedResult = -0.1;
         assertEquals(expectedResult, actualResult, 0.1);
     }
+
+    /**
+     * This method tests sum of two positive double values.
+     */
+    @Test
+    public void sumOf11dot11And11dot12Is22dot23() {
+        final double actualResult = calculator.sum(11.11, 11.12);
+        final double expectedResult = 22.23;
+        assertEquals(expectedResult, actualResult, 0.1);
+    }
 }

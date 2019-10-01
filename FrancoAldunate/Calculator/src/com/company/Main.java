@@ -50,7 +50,7 @@ public class Main {
             }
             System.out.println(String.format("Result %s(%s, %s): %s", operationName, a, b, result));
 
-            System.out.print("Exit? Y/N: ");
+            System.out.print("Continue? Y/N: ");
             final String selection = scannerInput.next();
             if (selection.equalsIgnoreCase("Y")) {
                 isActive = false;

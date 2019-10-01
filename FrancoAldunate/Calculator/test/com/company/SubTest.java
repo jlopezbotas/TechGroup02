@@ -26,12 +26,12 @@ public class SubTest {
      * This method tests subtraction of negative Double MAX_VALUE and Double MAX_VALUE.
      */
     @Test
-    public void subtractionOfNegativeDoubleMAX_VALUEAndDoubleMAX_VALUEIs0Dot0() {
+    public void subtractionOfNegativeDoubleMAX_VALUEAndDoubleMAX_VALUEIs0() {
         final double a = -Double.MAX_VALUE;
         final double b = -Double.MAX_VALUE;
         final double actualResult = calculator.sub(a, b);
         final double expectedResult = 0.0;
-        assertEquals(expectedResult, actualResult, 0);
+        assertEquals(expectedResult, actualResult, 0.1);
     }
 
     /**
@@ -41,6 +41,16 @@ public class SubTest {
     public void subtractionOf11dot11AndNegative11dot12Is22dot22() {
         final double actualResult = calculator.sub(11.11, -11.12);
         final double expectedResult = 22.22;
+        assertEquals(expectedResult, actualResult, 0.1);
+    }
+
+    /**
+     * This method tests subtraction of two positive double values.
+     */
+    @Test
+    public void subtractionOf7Dot7And70IsNegative62dot3() {
+        final double actualResult = calculator.sub(7.7, 70);
+        final double expectedResult = -62.3;
         assertEquals(expectedResult, actualResult, 0.1);
     }
 }
