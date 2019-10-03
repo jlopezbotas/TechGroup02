@@ -19,7 +19,7 @@ public class Display {
     }
 
     public String getOperator() {
-        System.out.println("Please enter the operator:");
+        System.out.println("Please enter the operator(+|-|*|/):");
         return scanner.nextLine();
     }
 }

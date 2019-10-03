@@ -1,5 +1,5 @@
 public class Calculator {
-    double partial;
+    private double partial;
     boolean on;
 
     Calculator() {
@@ -24,6 +24,7 @@ public class Calculator {
             return "Cannot divide by zero";
         return String.valueOf(firstValue / secondValue);
     }
+
     public String doOperation(String operator, String value) {
         switch(operator){
             case "+":
