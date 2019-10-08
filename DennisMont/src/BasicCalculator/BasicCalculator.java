@@ -1,4 +1,4 @@
-package DennisMont.BasicCalculator;
+package BasicCalculator;
 
 public class BasicCalculator {
 

@@ -1,6 +1,6 @@
-package DennisMont.BasicCalculatorTest;
+package BasicCalculatorTest;
 
-import DennisMont.BasicCalculator.BasicCalculator;
+import BasicCalculator.BasicCalculator;
 
 import static org.junit.Assert.*;
 
