@@ -4,12 +4,16 @@ import java.util.Scanner;
 
 public class TicTacToe {
 
-    private static String[][] matrix = new String[3][3];
+    private static String[][] matrix = {{"-", "-", "-"}, {"-", "-", "-"}, {"-", "-", "-"}};
+    private static Boolean win = false;
 
     public static void main(String[] args) {
         imp();
-        setValue();
-        imp();
+        while (!win) {
+            setValue();
+            imp();
+            win = validator(matrix);
+        }
     }
 
     public static void setValue() {
@@ -19,12 +23,8 @@ public class TicTacToe {
         System.out.println("add column");
         int column = reader.nextInt();
         System.out.println(" set value  ");
-
         String value = reader.next();
-
         matrix[row][column] = value;
-
-
     }
 
     public static void imp() {
@@ -36,5 +36,50 @@ public class TicTacToe {
             }
             System.out.println("|");
         }
+    }
+
+
+    public static boolean validator(String[][] matrixTest) {
+        if (matrixTest[1][1].equals(matrixTest[2][2]) & matrixTest[2][2].equals(matrixTest[0][0]) & !matrixTest[0][0].equals("-")) {
+            System.out.println("WINNER");
+            win = true;
+        }
+        if (matrixTest[0][2].equals(matrixTest[1][1]) & matrixTest[1][1].equals(matrixTest[2][0]) & !matrixTest[2][0].equals("-")) {
+            System.out.println("WINNER");
+            win = true;
+
+        }
+        if (matrixTest[0][0].equals(matrixTest[0][1]) & matrixTest[0][1].equals(matrixTest[0][2]) & !matrixTest[0][2].equals("-")) {
+            System.out.println("WINNER");
+            win = true;
+
+        }
+        if (matrixTest[1][0].equals(matrixTest[1][1]) & matrixTest[1][1].equals(matrixTest[1][2]) & !matrixTest[1][2].equals("-")) {
+            System.out.println("WINNER");
+            win = true;
+
+        }
+        if (matrixTest[2][0].equals(matrixTest[2][1]) & matrixTest[2][1].equals(matrixTest[2][2]) & !matrixTest[2][2].equals("-")) {
+            System.out.println("WINNER");
+            win = true;
+
+        }
+        if (matrixTest[0][0].equals(matrixTest[1][0]) & matrixTest[1][0].equals(matrixTest[2][0]) & !matrixTest[2][0].equals("-")) {
+            System.out.println("WINNER");
+            win = true;
+
+        }
+        if (matrixTest[0][1].equals(matrixTest[1][1]) & matrixTest[1][1].equals(matrixTest[2][1]) & !matrixTest[2][1].equals("-")) {
+            System.out.println("WINNER");
+            win = true;
+
+        }
+        if (matrixTest[0][2].equals(matrixTest[1][2]) & matrixTest[1][2].equals(matrixTest[2][2]) & !matrixTest[2][2].equals("-")) {
+            System.out.println("WINNER");
+            win = true;
+
+        }
+        System.out.print(win);
+        return win;
     }
 }
