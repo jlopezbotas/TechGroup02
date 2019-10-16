@@ -1,7 +1,15 @@
 public class Field {
-    String content = "";
-    String emptyValue = "_";
+    private String value = "";
+    private String emptyValue = "_";
     public boolean isEmpty() {
-        return content.equals("") || content.equals(emptyValue);
+        return value.equals("") || value.equals(emptyValue);
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
     }
 }

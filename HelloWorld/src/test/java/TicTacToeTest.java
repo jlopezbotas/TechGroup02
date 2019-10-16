@@ -5,28 +5,37 @@ import static org.junit.jupiter.api.Assertions.*;
 class TicTacToeTest {
 
     @Test
-    public void testCleanDashboard() {
+    void testCleanDashboard() {
         TicTacToe tictactoe = new TicTacToe();
         assertTrue(tictactoe.getDashboard().isEmpty());
     }
 
     @Test
-    public void testSingleRowWinnerDashboard() {
+    void testSingleRowWinnerDashboard() {
         TicTacToe tictactoe = new TicTacToe();
 
         tictactoe.getDashboard().fillField("X", new Position(0,0));
         tictactoe.getDashboard().fillField("X", new Position(1,0));
         tictactoe.getDashboard().fillField("X", new Position(2,0));
-        assertTrue(tictactoe.getDashboard().haveAWinner("X"));
+        assertEquals("X",tictactoe.getDashboard().haveAWinner());
     }
 
     @Test
-    public void testSingleColumnWinnerDashboard() {
+    void testSingleColumnWinnerDashboard() {
         TicTacToe tictactoe = new TicTacToe();
         tictactoe.getDashboard().fillField("O", new Position(0,0));
         tictactoe.getDashboard().fillField("O", new Position(0,1));
         tictactoe.getDashboard().fillField("O", new Position(0,2));
-        assertTrue(tictactoe.getDashboard().haveAWinner("O"));
+        assertEquals("O", tictactoe.getDashboard().haveAWinner());
+    }
+
+    @Test
+    void testSingleDiagonalWinnerDashboard() {
+        TicTacToe tictactoe = new TicTacToe();
+        tictactoe.getDashboard().fillField("I", new Position(0,2));
+        tictactoe.getDashboard().fillField("I", new Position(1,1));
+        tictactoe.getDashboard().fillField("I", new Position(2,0));
+        assertEquals("I", tictactoe.getDashboard().haveAWinner());
     }
 
     @Test
