@@ -13,6 +13,15 @@ public class BoardCell {
     private Seed content;
 
     /**
+     * Default constructor {@link BoardCell}.
+     */
+    public BoardCell() {
+        this.row = 0;
+        this.col = 0;
+        clear();
+    }
+
+    /**
      * Initializes {@link BoardCell} values.
      *
      * @param row value of BoardCell.
@@ -76,5 +85,17 @@ public class BoardCell {
      */
     public void clear() {
         content = Seed.EMPTY;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) return false;
+        if (!(obj instanceof BoardCell))
+            return false;
+        if (obj == this)
+            return true;
+        return ((this.getRow() == ((BoardCell) obj).getRow())
+                && (this.getCol() == ((BoardCell) obj).getCol())
+                && (this.getContent() == ((BoardCell) obj).getContent()));
     }
 }
