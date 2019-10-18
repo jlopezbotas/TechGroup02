@@ -60,4 +60,12 @@ class Board extends TicTacToeChecker {
     char[][] getBoard(){
         return board;
     }
+
+    /**
+     * Set the marked value on position
+     */
+    void setBoard(int row, int col, char value){
+        board[row][col]=value;
+    }
 }
+
