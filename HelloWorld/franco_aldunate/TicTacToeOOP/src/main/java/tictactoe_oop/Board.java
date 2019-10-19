@@ -3,6 +3,8 @@ package tictactoe_oop;
 import enums.Seed;
 import utils.BoardCellUtils;
 
+import java.util.Arrays;
+
 /**
  * This class models a 3x3 TicTacToe tictactoe_oop.Board.
  *
@@ -24,6 +26,15 @@ public class Board {
                 boardCells[row][col] = new BoardCell(row, col);
             }
         }
+    }
+
+    /**
+     * Gets the BoardCell array.
+     *
+     * @return the BoardCell array.
+     */
+    public BoardCell[][] getBoardCells() {
+        return boardCells;
     }
 
     /**
@@ -139,5 +150,15 @@ public class Board {
             System.out.println();
             System.out.println("------------");
         }
+    }
+
+    @Override
+    public boolean equals(final Object obj) {
+        if (obj == null) return false;
+        if (!(obj instanceof Board))
+            return false;
+        if (obj == this)
+            return true;
+        return Arrays.deepEquals(boardCells, ((Board) obj).getBoardCells());
     }
 }

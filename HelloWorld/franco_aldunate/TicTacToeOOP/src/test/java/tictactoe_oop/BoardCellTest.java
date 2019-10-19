@@ -16,12 +16,12 @@ public class BoardCellTest {
     private BoardCell boardCell;
 
     @BeforeEach
-    void setUp() {
+    public void setUp() {
         boardCell = new BoardCell();
     }
 
     @Test
-    void testGetRow() {
+    public void testGetRow() {
         boardCell.setRowCol(1, 0);
         final int expectedResult = 1;
         final int actualResult = boardCell.getRow();
@@ -29,7 +29,7 @@ public class BoardCellTest {
     }
 
     @Test
-    void testGetCol() {
+    public void testGetCol() {
         boardCell.setRowCol(0, 2);
         final int expectedResult = 2;
         final int actualResult = boardCell.getCol();
@@ -37,7 +37,7 @@ public class BoardCellTest {
     }
 
     @Test
-    void testGetContent() {
+    public void testGetContent() {
         boardCell.setContent(Seed.CROSS);
         final Seed expectedResult = Seed.CROSS;
         final Seed actualResult = boardCell.getContent();
@@ -45,19 +45,19 @@ public class BoardCellTest {
     }
 
     @Test
-    void testSetRowCol() {
+    public void testSetRowCol() {
         boardCell.setRowCol(2, 2);
         assertEquals(new BoardCell(2, 2), boardCell);
     }
 
     @Test
-    void testSetContent() {
+    public void testSetContent() {
         boardCell.setContent(Seed.NOUGHT);
         assertEquals(Seed.NOUGHT, boardCell.getContent());
     }
 
     @Test
-    void testClear() {
+    public void testClear() {
         boardCell.setContent(Seed.NOUGHT);
         boardCell.clear();
         assertEquals(Seed.EMPTY, boardCell.getContent());
