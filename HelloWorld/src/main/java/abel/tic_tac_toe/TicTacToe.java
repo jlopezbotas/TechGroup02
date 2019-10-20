@@ -6,20 +6,20 @@ public class TicTacToe {
 
     private static String[][] matrix = {{"-", "-", "-"}, {"-", "-", "-"}, {"-", "-", "-"}};
     private static Boolean win = false;
+    static player p1= new player("Abel","X");
+    static player p2= new player("Gustavo","O");
 
     public static void main(String[] args) {
-        String playerX = "X";
-        String playerY = "Y";
-        String turn = "X";
+        String turn = p1.getName();
         int cont = 0;
         imp(matrix);
         while (!win) {
-            if (turn.equals("X")) {
-                setValue(playerX);
-                turn = "Y";
+            if (turn.equals(p1.getName())) {
+                setValue(p1);
+                turn = p2.getName();
             } else {
-                setValue(playerY);
-                turn = "X";
+                setValue(p2);
+                turn = p1.getName();
             }
             if (cont == 8) {
                 System.out.print("finished");
@@ -36,9 +36,9 @@ public class TicTacToe {
         }
     }
 
-    private static void setValue(String player) {
+    private static void setValue(player player) {
         Scanner reader = new Scanner(System.in);
-        System.out.println("Turn of player : " + player);
+        System.out.println("Turn of player : " + player.getName());
         Boolean fly = true;
         int row = 0;
         int column = 0;
@@ -51,10 +51,8 @@ public class TicTacToe {
             if (fly) {
             }
             System.out.println("Please select an other position !! ");
-
-
         }
-        matrix[row][column] = player;
+        matrix[row][column] = player.getTag();
 
     }
 
