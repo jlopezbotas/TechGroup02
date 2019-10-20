@@ -1,9 +1,6 @@
-package jorge_flores.tic_tac_toe.model;
+package model;
 
 public class PlayerTTT {
-
-
-
     public static void setValueToOneOne(String value, String[][] tableTTT) {
         tableTTT[0][0] = value;
     }

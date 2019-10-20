@@ -1,8 +1,8 @@
-package jorge_flores.tic_tac_toe.controller;
+package controller;
 
-import jorge_flores.tic_tac_toe.model.PlayerTTT;
-import jorge_flores.tic_tac_toe.model.TableTTT;
-import jorge_flores.tic_tac_toe.view.TicTacToeView;
+import model.PlayerTTT;
+import model.TableTTT;
+import view.TicTacToeView;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,7 +11,7 @@ public class TicTacToeController implements ActionListener {
 
     private TicTacToeView viewTTT;
     private TableTTT tableTTT;
-    private PlayerTTT PlayerTTT;
+    private model.PlayerTTT PlayerTTT;
 
     public TicTacToeController(TicTacToeView ticTacToeView, TableTTT tableTTT, PlayerTTT playerTTT) {
         this.viewTTT = ticTacToeView;

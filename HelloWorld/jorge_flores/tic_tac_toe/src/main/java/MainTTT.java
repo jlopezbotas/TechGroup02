@@ -1,9 +1,7 @@
-package jorge_flores.tic_tac_toe;
-
-import jorge_flores.tic_tac_toe.controller.TicTacToeController;
-import jorge_flores.tic_tac_toe.model.PlayerTTT;
-import jorge_flores.tic_tac_toe.model.TableTTT;
-import jorge_flores.tic_tac_toe.view.TicTacToeView;
+import controller.TicTacToeController;
+import model.PlayerTTT;
+import model.TableTTT;
+import view.TicTacToeView;
 
 public class MainTTT {
     public static void main(String[] args) {

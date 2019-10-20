@@ -1,5 +1,5 @@
+import model.TableTTT;
 import org.junit.jupiter.api.Test;
-import jorge_flores.tic_tac_toe.model.TableTTT;
 
 import static org.junit.jupiter.api.Assertions.*;
 

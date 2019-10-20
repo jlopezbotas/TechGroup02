@@ -1,4 +1,4 @@
-package jorge_flores.tic_tac_toe.view;
+package view;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package jorge_flores.tic_tac_toe.model;
+package model;
 
 public class TableTTT {
     private String[][] table = {{"1", "2", "3"}, {"4", "5", "6"}, {"7", "8", "9"}};
