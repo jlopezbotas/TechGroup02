@@ -30,6 +30,15 @@ public class TicTacToe {
     }
 
     /**
+     * Gets TicTacToe Board.
+     *
+     * @return TicTacToe Board.
+     */
+    public Board getBoard() {
+        return board;
+    }
+
+    /**
      * Switches current Seed.
      */
     public void switchPlayer() {
@@ -85,5 +94,16 @@ public class TicTacToe {
      */
     public void printBoard() {
         board.print();
+    }
+
+    @Override
+    public boolean equals(final Object obj) {
+        if (obj == null) return false;
+        if (!(obj instanceof TicTacToe))
+            return false;
+        if (obj == this)
+            return true;
+        return (this.board.equals(((TicTacToe) obj).getBoard())
+                && this.currentSeed.equals(((TicTacToe) obj).getCurrentSeed()));
     }
 }
