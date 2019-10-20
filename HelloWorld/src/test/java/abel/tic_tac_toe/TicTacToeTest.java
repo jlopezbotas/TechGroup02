@@ -2,7 +2,8 @@ package abel.tic_tac_toe;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class TicTacToeTest {
 
@@ -18,9 +19,10 @@ class TicTacToeTest {
         String[][] matrixTest = {{"X", "-", "-"}, {"X", "O", "-"}, {"X", "O", "O"}};
         assertTrue(TicTacToe.validator(matrixTest));
     }
+
     @Test
     void testValidatorNegative() {
-        String[][] matrixTest = {{"X", "-", "-"}, {"X", "O", "X"}, {"-", "O", "O"}};
-        assertFalse(TicTacToe.validator(matrixTest));
+        String[][] matrixTest2 = {{"X", "-", "-"}, {"X", "O", "X"}, {"-", "O", "O"}};
+        assertFalse(TicTacToe.validator(matrixTest2));
     }
 }
