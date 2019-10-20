@@ -24,6 +24,7 @@ public enum Seed {
 
     /**
      * Gets actual seed value.
+     *
      * @return seed value.
      */
     public String getValue() {
