@@ -38,31 +38,58 @@ public class TicTacToeController implements ActionListener {
         Object botton = actionEvent.getSource();
         if (viewTTT.oneOne.equals(botton)) {
             viewTTT.oneOne.setText(viewTTT.player.getText());
-            PlayerTTT.setValueToOneOne(viewTTT.player.getText(), tableTTT.getTable());
+            PlayerTTT.setValueToField(
+                    viewTTT.oneOne.getHorizontalTextPosition(),
+                    viewTTT.oneOne.getVerticalTextPosition(),
+                    viewTTT.player.getText(), tableTTT.getTable());
         } else if (viewTTT.twoTwo.equals(botton)) {
             viewTTT.twoTwo.setText(viewTTT.player.getText());
-            PlayerTTT.setValueToTwoTwo(viewTTT.player.getText(), tableTTT.getTable());
+            PlayerTTT.setValueToField(
+                    viewTTT.twoTwo.getHorizontalTextPosition(),
+                    viewTTT.twoTwo.getVerticalTextPosition(),
+                    viewTTT.player.getText(), tableTTT.getTable());
         } else if (viewTTT.threeThree.equals(botton)) {
             viewTTT.threeThree.setText(viewTTT.player.getText());
-            PlayerTTT.setValueToThreeThree(viewTTT.player.getText(), tableTTT.getTable());
+            PlayerTTT.setValueToField(
+                    viewTTT.oneOne.getHorizontalTextPosition(),
+                    viewTTT.oneOne.getVerticalTextPosition(),
+                    viewTTT.player.getText(), tableTTT.getTable());
         } else if (viewTTT.fourFour.equals(botton)) {
             viewTTT.fourFour.setText(viewTTT.player.getText());
-            PlayerTTT.setValueToFourFour(viewTTT.player.getText(), tableTTT.getTable());
+            PlayerTTT.setValueToField(
+                    viewTTT.fourFour.getHorizontalTextPosition(),
+                    viewTTT.fourFour.getVerticalTextPosition(),
+                    viewTTT.player.getText(), tableTTT.getTable());
         } else if (viewTTT.fiveFive.equals(botton)) {
             viewTTT.fiveFive.setText(viewTTT.player.getText());
-            PlayerTTT.setValueToFiveFive(viewTTT.player.getText(), tableTTT.getTable());
+            PlayerTTT.setValueToField(
+                    viewTTT.fiveFive.getHorizontalTextPosition(),
+                    viewTTT.fiveFive.getVerticalTextPosition(),
+                    viewTTT.player.getText(), tableTTT.getTable());
         } else if (viewTTT.sixSix.equals(botton)) {
             viewTTT.sixSix.setText(viewTTT.player.getText());
-            PlayerTTT.setValueToSixSix(viewTTT.player.getText(), tableTTT.getTable());
+            PlayerTTT.setValueToField(
+                    viewTTT.sixSix.getHorizontalTextPosition(),
+                    viewTTT.sixSix.getVerticalTextPosition(),
+                    viewTTT.player.getText(), tableTTT.getTable());
         } else if (viewTTT.sevenSeven.equals(botton)) {
             viewTTT.sevenSeven.setText(viewTTT.player.getText());
-            PlayerTTT.setValueToSevenSeven(viewTTT.player.getText(), tableTTT.getTable());
+            PlayerTTT.setValueToField(
+                    viewTTT.sevenSeven.getHorizontalTextPosition(),
+                    viewTTT.sevenSeven.getVerticalTextPosition(),
+                    viewTTT.player.getText(), tableTTT.getTable());
         } else if (viewTTT.eightEight.equals(botton)) {
             viewTTT.eightEight.setText(viewTTT.player.getText());
-            PlayerTTT.setValueToEightEight(viewTTT.player.getText(), tableTTT.getTable());
+            PlayerTTT.setValueToField(
+                    viewTTT.eightEight.getHorizontalTextPosition(),
+                    viewTTT.eightEight.getVerticalTextPosition(),
+                    viewTTT.player.getText(), tableTTT.getTable());
         } else if (viewTTT.nineNine.equals(botton)) {
             viewTTT.nineNine.setText(viewTTT.player.getText());
-            PlayerTTT.setValueToNineNine(viewTTT.player.getText(), tableTTT.getTable());
+            PlayerTTT.setValueToField(
+                    viewTTT.nineNine.getHorizontalTextPosition(),
+                    viewTTT.nineNine.getVerticalTextPosition(),
+                    viewTTT.player.getText(), tableTTT.getTable());
         } else if (viewTTT.start.equals(botton)) {
             viewTTT.cleanAll();
             tableTTT.cleanAll();

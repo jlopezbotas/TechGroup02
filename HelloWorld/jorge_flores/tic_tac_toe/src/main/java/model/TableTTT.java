@@ -1,14 +1,31 @@
 package model;
 
 public class TableTTT {
-    private String[][] table = {{"1", "2", "3"}, {"4", "5", "6"}, {"7", "8", "9"}};
+    private int columns = 3;
+    private int rows = 3;
+    private String[][] table = new String[rows][columns];
+
+    public TableTTT() {
+        FillTable();
+    }
+
+    public void setTable(String[][] table)
+    {
+        this.table = table;
+    }
+
+    private void FillTable() {
+        for (int r = 0; r < rows; r++ )
+        {
+            for (int c = 0; c < columns; c++ )
+            {
+                table[r][c] = String.valueOf(r).concat("-").concat(String.valueOf(c));
+            }
+        }
+    }
 
     public String[][] getTable() {
         return table;
-    }
-
-    public void setTable(String[][] table) {
-        this.table = table;
     }
 
     public boolean verifyTicTacToe()
