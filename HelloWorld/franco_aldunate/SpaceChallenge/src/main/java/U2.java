@@ -8,12 +8,10 @@ public class U2 extends Rocket {
 
     /**
      * Constructor {@link U2} initializes values.
-     *
-     * @param weight    of rocket;
-     * @param maxWeight is rocket cargo max totalWeight capacity;
      */
-    public U2(int weight, int maxWeight) {
-        super(weight, maxWeight);
+    public U2() {
+        this.totalWeight = 18000;
+        this.maxCargo = 29000;
     }
 
     /**

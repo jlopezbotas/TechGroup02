@@ -8,12 +8,10 @@ public class U1 extends Rocket {
 
     /**
      * Constructor {@link U1} initializes values.
-     *
-     * @param weight    of rocket;
-     * @param maxWeight is rocket cargo max totalWeight capacity;
      */
-    public U1(int weight, int maxWeight) {
-        super(weight, maxWeight);
+    public U1() {
+        this.totalWeight = 10000;
+        this.maxCargo = 18000;
     }
 
     /**
