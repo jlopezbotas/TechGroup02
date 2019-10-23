@@ -1,6 +1,6 @@
 /**
- * The Board class models the game-board.
- */
+* The Board class models the game-board.
+*/
 public class Board {  // save as Board.java
     // Named-constants for the dimensions
     public static final int ROWS = 3;
