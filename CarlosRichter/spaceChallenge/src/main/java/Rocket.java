@@ -1,4 +1,9 @@
 public class Rocket implements Spaceship {
+    protected int rocketCost;
+    protected int rocketWeight;
+    protected int maxWeightWithCargo;
+    protected double chanceOfLaunchExplosion;
+    protected double chanceOfLandingCrash;
 
     public boolean launch() {
         return true;
