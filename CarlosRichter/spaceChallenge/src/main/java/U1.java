@@ -3,6 +3,8 @@ public class U1 extends Rocket {
         rocketCost = 100;
         rocketWeight = 10;
         maxWeightWithCargo = 18;
+//        getItemList();
+
     }
 
     public void setChanceOfLaunchExplosion(int cargoCarried) {

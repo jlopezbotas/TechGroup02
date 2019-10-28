@@ -24,8 +24,26 @@ public class Simulation {
             item.setWeight(Integer.parseInt(line.split("=")[1]));
             list.add(item);
         }
-
-
         return list;
     }
+
+    public List<U1> loadU1(List<Item> arrayList){
+        List rocketList= new ArrayList();
+        while (arrayList.size()>0){
+        U1 u1 = new U1();
+        for(Item item : arrayList){
+            if(u1.canCarry(item)){
+                u1.carry(item);
+//                arrayList.remove(item);
+            }
+
+        }
+            rocketList.add(u1);
+        for(Item item:u1.getItemList() ){
+            arrayList.remove(item);
+        }
+        }
+        return rocketList;
+    }
+
 }
