@@ -4,8 +4,6 @@ public class Rocket implements Spaceship {
      int rocketCost;
      int rocketWeight;
      int maxWeightWithCargo;
-     double chanceOfLaunchExplosion;
-     double chanceOfLandingCrash;
      public ArrayList<Item> itemList = new ArrayList<Item>();
 
     public boolean launch() {

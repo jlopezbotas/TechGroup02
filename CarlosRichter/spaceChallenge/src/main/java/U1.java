@@ -3,15 +3,22 @@ public class U1 extends Rocket {
         rocketCost = 100;
         rocketWeight = 10;
         maxWeightWithCargo = 18;
-//        getItemList();
-
     }
 
-    public void setChanceOfLaunchExplosion(int cargoCarried) {
-        this.chanceOfLaunchExplosion = 0.05*(cargoCarried/maxWeightWithCargo);
+    @Override
+    public boolean launch() {
+        if(Math.random()< 0.05*(this.rocketWeight/this.maxWeightWithCargo)){
+            return false;
+        }else{
+            return true;}
     }
 
-    public void setChanceOfLandingCrash(int cargoCarried) {
-        this.chanceOfLandingCrash = 0.01*(cargoCarried/maxWeightWithCargo);
+    @Override
+    public boolean land() {
+        if(Math.random()< 0.01*(this.rocketWeight/this.maxWeightWithCargo)){
+            return false;
+        }else{
+            return true;}
     }
+
 }

@@ -4,11 +4,20 @@ public class U2 extends Rocket {
         rocketWeight = 18;
         maxWeightWithCargo = 29;
     }
-    public void setChanceOfLaunchExplosion(int cargoCarried) {
-        this.chanceOfLaunchExplosion = 0.04*(cargoCarried/maxWeightWithCargo);
+    @Override
+    public boolean launch() {
+        if(Math.random()< 0.04*(rocketWeight/maxWeightWithCargo)){
+            return false;
+        }else{
+            return true;}
+    }
+    @Override
+    public boolean land() {
+        if(Math.random()< 0.08*(rocketWeight/maxWeightWithCargo)){
+            return false;
+        }else{
+            return true;}
     }
 
-    public void setChanceOfLandingCrash(int cargoCarried) {
-        this.chanceOfLandingCrash = 0.08*(cargoCarried/maxWeightWithCargo);
-    }
+
 }
