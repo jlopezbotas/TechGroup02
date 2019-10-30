@@ -1,10 +1,9 @@
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String [] args) throws FileNotFoundException {
+    public static void main(String [] args) throws Exception {
         Simulation simulation = new Simulation();
         File phase1 = new File(new File("phase-1.txt").getAbsolutePath());
         File phase2 = new File(new File("phase-2.txt").getAbsolutePath());
