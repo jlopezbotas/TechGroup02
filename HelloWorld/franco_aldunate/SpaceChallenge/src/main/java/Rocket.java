@@ -9,7 +9,7 @@ import java.util.Random;
 public class Rocket implements SpaceShip {
     protected static final Random RANDOM_NUMBER = new Random();
     protected int cost;
-    protected int totalWeight;
+    protected double totalWeight;
     protected int totalItems;
     protected int maxCargo;
     protected double launchExplosionChance;
@@ -36,17 +36,8 @@ public class Rocket implements SpaceShip {
      *
      * @return rocket total weight value.
      */
-    public int getTotalWeight() {
+    public double getTotalWeight() {
         return totalWeight;
-    }
-
-    /**
-     * Gets rocket max cargo.
-     *
-     * @return rocket max cargo value.
-     */
-    public int getMaxCargo() {
-        return maxCargo;
     }
 
     /**
@@ -55,8 +46,8 @@ public class Rocket implements SpaceShip {
      * @param alpha value to use in calculation.
      * @return explosion chance.
      */
-    protected double performExplosionChance(final double alpha) {
-        return alpha * (getTotalWeight() / getMaxCargo());
+    public double performExplosionChance(final double alpha) {
+        return alpha * (totalWeight / maxCargo);
     }
 
     /**
@@ -84,7 +75,7 @@ public class Rocket implements SpaceShip {
      * @return true if the rocket can carry target item or false if it will exceed the totalWeight limit.
      */
     public final boolean canCarry(final Item item) {
-        int auxWeight = this.totalWeight;
+        double auxWeight = this.totalWeight;
         auxWeight += item.getWeight();
         return auxWeight <= this.maxCargo;
     }
