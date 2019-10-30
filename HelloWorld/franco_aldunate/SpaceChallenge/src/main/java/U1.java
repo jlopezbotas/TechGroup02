@@ -5,13 +5,17 @@
  * @version 22/10/2019
  */
 public class U1 extends Rocket {
+    private static final int COST = 100000000;
+    private static final int WEIGHT = 10000;
+    private static final int MAX_CARGO = 18000;
 
     /**
      * Constructor {@link U1} initializes values.
      */
     public U1() {
-        this.totalWeight = 10000;
-        this.maxCargo = 18000;
+        this.cost = COST;
+        this.totalWeight = WEIGHT;
+        this.maxCargo = MAX_CARGO;
     }
 
     /**

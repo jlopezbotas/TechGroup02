@@ -8,6 +8,7 @@ import java.util.Random;
  */
 public class Rocket implements SpaceShip {
     protected static final Random RANDOM_NUMBER = new Random();
+    protected int cost;
     protected int totalWeight;
     protected int totalItems;
     protected int maxCargo;
@@ -19,6 +20,15 @@ public class Rocket implements SpaceShip {
      */
     public Rocket() {
         this.totalItems = 0;
+    }
+
+    /**
+     * Gets rocket cost.
+     *
+     * @return rocket cost value.
+     */
+    public int getCost() {
+        return cost;
     }
 
     /**

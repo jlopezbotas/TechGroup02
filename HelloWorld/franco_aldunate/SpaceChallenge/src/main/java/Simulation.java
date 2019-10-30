@@ -146,4 +146,22 @@ public class Simulation {
         }
         return rockets;
     }
+
+    /**
+     * Runs simulation of launching and landing rockets.
+     *
+     * @param rockets is a list of Rockets (any type).
+     * @return sum of cost of all rockets launched.
+     */
+    public int runSimulation(final ArrayList<Rocket> rockets) {
+        int totalBudget = 0;
+        for (Rocket rocket : rockets) {
+            totalBudget += rocket.getCost();
+            if (!rocket.launch() || !rocket.land()) {
+                totalBudget += rocket.getCost();
+                rocket.launch();
+            }
+        }
+        return totalBudget;
+    }
 }
