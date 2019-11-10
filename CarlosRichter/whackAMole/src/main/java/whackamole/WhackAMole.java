@@ -1,12 +1,13 @@
 package whackamole;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class WhackAMole {
-  int score = 0;
-  int molesLeft;
-  int attemptsleft;
-  char[][] moleGrid;
+  private final char[][] moleGrid;
+  private int score = 0;
+  private int molesLeft;
+  private int attemptsleft;
 
   /**
    * Wacko class.
@@ -21,15 +22,16 @@ public class WhackAMole {
     this.moleGrid = new char[gridDimension][gridDimension];
     for (int i = 0; i < gridDimension; i++) {
       for (int j = 0; j < gridDimension; j++) {
-        moleGrid[i][j] = '*';
+        this.moleGrid[i][j] = '*';
       }
     }
     int x;
     int y;
     while (numMoles > 0) {
-      x = (int) (Math.random() * 9 + 1);
-      y = (int) (Math.random() * 9 + 1);
-      if (place(x, y)) {
+      final Random random = new Random();
+      x = random.nextInt() * 10;
+      y = random.nextInt() * 10;
+      if (this.place(x, y)) {
         numMoles -= 1;
       }
     }
@@ -70,10 +72,9 @@ public class WhackAMole {
     whackAMole.printGrid();
   }
 
-  boolean place(final int x, final int y) {
-    if (moleGrid[x][y] != 'M') {
-      moleGrid[x][y] = 'M';
-      // this.molesLeft -= 1;
+  private boolean place(final int x, final int y) {
+    if (this.moleGrid[x][y] != 'M') {
+      this.moleGrid[x][y] = 'M';
       return true;
     } else {
       return false;
@@ -81,8 +82,8 @@ public class WhackAMole {
   }
 
   void whack(final int x, final int y) {
-    if (moleGrid[x][y] == 'M') {
-      moleGrid[x][y] = 'W';
+    if (this.moleGrid[x][y] == 'M') {
+      this.moleGrid[x][y] = 'W';
       this.molesLeft -= 1;
       this.score += 1;
     }
@@ -92,13 +93,13 @@ public class WhackAMole {
   void printGridToUser() {
     System.out.println("Score: " + this.score);
     System.out.println("attempst left: " + this.attemptsleft);
-    for (int i = 0; i < moleGrid.length; i++) {
+    for (int i = 0; i < this.moleGrid.length; i++) {
       System.out.print("| ");
-      for (int j = 0; j < moleGrid.length; j++) {
-        if (moleGrid[i][j] == 'M') {
+      for (int j = 0; j < this.moleGrid.length; j++) {
+        if (this.moleGrid[i][j] == 'M') {
           System.out.print("*" + " | ");
         } else {
-          System.out.print(moleGrid[i][j] + " | ");
+          System.out.print(this.moleGrid[i][j] + " | ");
         }
       }
       System.out.println("");
@@ -108,10 +109,10 @@ public class WhackAMole {
   void printGrid() {
     System.out.println("Score: " + this.score);
     System.out.println("attempst left: " + this.attemptsleft);
-    for (int i = 0; i < moleGrid.length; i++) {
+    for (int i = 0; i < this.moleGrid.length; i++) {
       System.out.print("| ");
-      for (int j = 0; j < moleGrid.length; j++) {
-        System.out.print(moleGrid[i][j] + " | ");
+      for (int j = 0; j < this.moleGrid.length; j++) {
+        System.out.print(this.moleGrid[i][j] + " | ");
       }
       System.out.println("");
     }
