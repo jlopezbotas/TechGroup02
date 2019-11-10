@@ -9,9 +9,11 @@ public class WhackAMole {
   char[][] moleGrid;
 
   /**
-   * @param numAttempts
-   * @param gridDimension
-   * @param numMoles
+   * Wacko class.
+   *
+   * @param numAttempts   the total number of attempts.
+   * @param gridDimension the dimension of the grid.
+   * @param numMoles      the number of moles.
    */
   public WhackAMole(final int numAttempts, final int gridDimension, int numMoles) {
     this.molesLeft = numMoles;
@@ -22,7 +24,8 @@ public class WhackAMole {
         moleGrid[i][j] = '*';
       }
     }
-    int x, y;
+    int x;
+    int y;
     while (numMoles > 0) {
       x = (int) (Math.random() * 9 + 1);
       y = (int) (Math.random() * 9 + 1);
@@ -33,13 +36,15 @@ public class WhackAMole {
 
   }
 
+  /**
+   * This is the main method. run it if you want to play the game.
+   *
+   * @param args arguments.
+   */
   public static void main(final String[] args) {
     final WhackAMole whackAMole = new WhackAMole(10, 10, 10);
     int x;
     int y;
-//        whackAMole.printGrid();
-//        System.out.println("----------------");
-//        whackAMole.printGridToUser();
 
     while (whackAMole.attemptsleft > 0) {
       final Scanner scanner = new Scanner(System.in);
