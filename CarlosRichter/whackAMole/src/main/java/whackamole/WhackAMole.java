@@ -10,7 +10,7 @@ public class WhackAMole {
   private int attemptsleft;
 
   /**
-   * Wacko class.
+   * constructor.
    *
    * @param numAttempts   the total number of attempts.
    * @param gridDimension the dimension of the grid.
