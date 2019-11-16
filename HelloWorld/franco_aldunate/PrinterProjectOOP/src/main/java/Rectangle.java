@@ -7,27 +7,28 @@
 public class Rectangle implements Shape {
     private int width;
     private int height;
+    private char character;
 
     /**
      * Constructor {@link Rectangle} initializes values.
      *
-     * @param width  of Rectangle.
-     * @param height of Rectangle.
+     * @param width     of Rectangle.
+     * @param height    of Rectangle.
+     * @param character to use for drawing Rectangle.
      */
-    public Rectangle(final int width, final int height) {
+    public Rectangle(final int width, final int height, final char character) {
         this.width = width;
         this.height = height;
+        this.character = character;
     }
 
     /**
-     * Draws shape given a character.
-     *
-     * @param character to use for drawing shape.
+     * Draws shape.
      */
-    public void draw(final char character) {
+    public void draw() {
         for (int i = 0; i < this.height; i++) {
             for (int j = 0; j < this.width; j++) {
-                System.out.print(String.format("%s ", character));
+                System.out.print(String.format("%s ", this.character));
             }
             System.out.println();
         }
