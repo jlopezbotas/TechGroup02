@@ -6,9 +6,7 @@
  */
 public interface Shape {
     /**
-     * Draws shape given a character.
-     *
-     * @param character to use for drawing shape.
+     * Draws shape.
      */
-    public void draw(final char character);
+    public void draw();
 }
