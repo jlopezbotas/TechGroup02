@@ -6,22 +6,23 @@
  */
 public class Triangle implements Shape {
     private int height;
+    private char character;
 
     /**
      * Constructor {@link Triangle} initializes values.
      *
-     * @param height of Rectangle.
+     * @param height    of Triangle.
+     * @param character to use for drawing Triangle.
      */
-    public Triangle(final int height) {
+    public Triangle(final int height, final char character) {
         this.height = height;
+        this.character = character;
     }
 
     /**
-     * Draws shape given a character.
-     *
-     * @param character to use for drawing shape.
+     * Draws shape.
      */
-    public void draw(final char character) {
+    public void draw() {
         for (int i = 0; i < this.height; i++) {
             int charQuantity = 1 + 2 * (i);
             int space = this.height - i;
@@ -29,7 +30,7 @@ public class Triangle implements Shape {
                 System.out.print("  ");
             }
             for (int k = 0; k < charQuantity; k++) {
-                System.out.print(String.format("%s ", character));
+                System.out.print(String.format("%s ", this.character));
             }
             System.out.println();
         }
