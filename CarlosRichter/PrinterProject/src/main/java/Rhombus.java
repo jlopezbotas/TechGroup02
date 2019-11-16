@@ -1,5 +1,6 @@
-public class Rhombus implements Shape {
+public class Rhombus extends Shape {
 
+    @Override
     public void print() {
 
     }
