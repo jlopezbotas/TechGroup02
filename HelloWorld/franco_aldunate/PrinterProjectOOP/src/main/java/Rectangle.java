@@ -27,6 +27,7 @@ public class Rectangle implements Shape {
      */
     public void draw() {
         for (int i = 0; i < this.height; i++) {
+            System.out.print("  ");
             for (int j = 0; j < this.width; j++) {
                 System.out.print(String.format("%s ", this.character));
             }

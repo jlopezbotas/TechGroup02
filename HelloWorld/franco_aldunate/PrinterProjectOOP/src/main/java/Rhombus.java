@@ -37,7 +37,7 @@ public class Rhombus implements Shape {
     public void draw() {
         for (int i = 0; i < this.height / 2; i++) {
             int charQuantity = 1 + 2 * (i);
-            int space = this.height - i;
+            int space = this.height / 2 - i + 1;
             for (int j = 0; j < space; j++) {
                 System.out.print("  ");
             }
@@ -48,7 +48,7 @@ public class Rhombus implements Shape {
         }
         for (int i = this.height / 2; i > -1; i--) {
             int charQuantity = 1 + 2 * (i);
-            int space = this.height - i;
+            int space = this.height / 2 - i + 1;
             for (int j = space; j > 0; j--) {
                 System.out.print("  ");
             }

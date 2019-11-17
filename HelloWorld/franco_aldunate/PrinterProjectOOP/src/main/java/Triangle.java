@@ -23,9 +23,14 @@ public class Triangle implements Shape {
      * Draws shape.
      */
     public void draw() {
+        int space;
         for (int i = 0; i < this.height; i++) {
             int charQuantity = 1 + 2 * (i);
-            int space = this.height - i;
+            if (i < 1) {
+                space = this.height - i / 2;
+            } else {
+                space = this.height - i;
+            }
             for (int j = 0; j < space; j++) {
                 System.out.print("  ");
             }
