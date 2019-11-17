@@ -5,7 +5,8 @@ public class Rhombus extends Shape {
         this.height = height;
     }
     @Override
-    public void print() {
+    public String print() {
 
+        return null;
     }
 }

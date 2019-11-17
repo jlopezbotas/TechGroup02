@@ -1,5 +1,5 @@
 public abstract class Shape {
-    public char printChar;
+    public String printChar;
 
-    public abstract void print();
+    public abstract String print();
 }
