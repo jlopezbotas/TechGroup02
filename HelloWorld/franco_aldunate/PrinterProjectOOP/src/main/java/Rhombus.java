@@ -4,7 +4,7 @@
  * @author Franco Aldunate
  * @version 16/11/2019
  */
-public class Rhombus {
+public class Rhombus implements Shape {
     private int height;
     private char character;
 
