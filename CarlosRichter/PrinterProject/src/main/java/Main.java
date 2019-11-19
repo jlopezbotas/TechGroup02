@@ -1,6 +1,6 @@
 public class Main {
-    public static void main(final String[] args) {
-        Printer.mainMenu();
-    }
+  public static void main(final String[] args) {
+    Printer.mainMenu();
+  }
 
 }
