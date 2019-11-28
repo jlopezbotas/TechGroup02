@@ -1,6 +1,7 @@
 public class Main {
   public static void main(final String[] args) {
-    Printer.mainMenu();
+    Printer printer = new Printer();
+    printer.mainMenu();
   }
 
 }

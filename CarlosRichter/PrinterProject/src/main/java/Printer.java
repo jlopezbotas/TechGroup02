@@ -3,9 +3,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Printer {
-    static List<Shape> shapeList = new ArrayList<Shape>();
+    private List<Shape> shapeList = new ArrayList<Shape>();
 
-    static void mainMenu() {
+    public void mainMenu() {
         int option = 0;
         while (option != 5) {
             System.out.println("Main Project. Select an option");
@@ -30,13 +30,13 @@ public class Printer {
                     printAllShapes();
                     break;
                 case 5:
-                    System.out.println("gracias pro participar");
+                    System.out.println("Gracias por participar");
                     break;
             }
         }
     }
 
-    static Rectangle rectangleMenu() {
+    private Rectangle rectangleMenu() {
         final Scanner scanner = new Scanner(System.in);
         System.out.println("Rectangle");
         System.out.println("Enter width: ");
@@ -49,7 +49,7 @@ public class Printer {
         return new Rectangle(printChar, width, height);
     }
 
-    static Triangle triangleMenu() {
+    private Triangle triangleMenu() {
         final Scanner scanner = new Scanner(System.in);
         System.out.println("Triangle");
         System.out.println("Enter height:");
@@ -60,7 +60,7 @@ public class Printer {
         return new Triangle(printChar, height);
     }
 
-    static void printAllShapes() {
+    private void printAllShapes() {
         for (final Shape shape : shapeList) {
             System.out.println(shape.print());
         }
