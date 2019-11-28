@@ -20,7 +20,7 @@ public class Rectangle extends Figure {
             for(int j = 0; j < width; j++){
                 array.add(this.sign);
             }
-            this.figure.add(array);
+            this.figureBody.add(array);
         }
     }
 }

@@ -19,7 +19,7 @@ public class Triangle extends Figure {
             for(int column = 0; column < ((2 * this.height) - 1); column++){
                 array.add(this.isFigureSpace(row, column) ? this.sign : ' ');
             }
-            this.figure.add(array);
+            this.figureBody.add(array);
         }
     }
 

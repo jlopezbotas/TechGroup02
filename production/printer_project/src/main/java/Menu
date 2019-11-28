@@ -44,30 +44,30 @@ public class Menu {
         final int height = scanner.nextInt();
         System.out.print("Enter char: ");
         final Scanner scanner2 = new Scanner(System.in);
-        final char signChar = scanner2.next().charAt(0);
-        figuresList = new FigureManager().createFigure("Rectangle", signChar, height, width);
+        final char printChar = scanner2.next().charAt(0);
+        figuresList = new FigureManager().createFigure("Rectangle", printChar, height, width);
     }
 
     private void triangleMenu() {
-        final Scanner scannerHeight = new Scanner(System.in);
+        final Scanner scanner = new Scanner(System.in);
         System.out.println("Triangle");
         System.out.println("Enter height:");
-        final int height = scannerHeight.nextInt();
+        final int height = scanner.nextInt();
         System.out.println("Enter char: ");
-        final Scanner scannerSignChar = new Scanner(System.in);
-        final char signChar = scannerSignChar.next().charAt(0);
-        figuresList = new FigureManager().createFigure("Triangle", signChar, height, -1);
+        final Scanner scanner2 = new Scanner(System.in);
+        final char printChar = scanner2.next().charAt(0);
+        figuresList = new FigureManager().createFigure("Triangle", printChar, height, -1);
     }
 
     private void rhombusMenu() {
-        final Scanner scannerHeight = new Scanner(System.in);
-        System.out.println("Rhombus");
+        final Scanner scanner = new Scanner(System.in);
+        System.out.println("Triangle");
         System.out.println("Enter height:");
-        final int height = scannerHeight.nextInt();
+        final int height = scanner.nextInt();
         System.out.println("Enter char: ");
-        final Scanner scannerSign = new Scanner(System.in);
-        final char signChar = scannerSign.next().charAt(0);
-        figuresList = new FigureManager().createFigure("Rhombus", signChar, height, -1);
+        final Scanner scanner2 = new Scanner(System.in);
+        final char printChar = scanner2.next().charAt(0);
+        figuresList = new FigureManager().createFigure("Triangle", printChar, height, -1);
     }
 
     public void printFigures() {
